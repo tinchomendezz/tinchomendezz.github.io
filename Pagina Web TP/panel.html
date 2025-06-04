@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel - Melodía Viva</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="codigo.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1> Panel de Clientes y Precios</h1>
+  </header>
+
+  <main>
+    <section class="div2">
+      <h2>Registro de Cliente</h2>
+      <form>
+        <p>Nombre: <input type="text" id="nombre" /></p>
+        <p>Apellido: <input type="text" id="apellido" /></p>
+        <p>DNI: <input type="number" id="dni" /></p>
+        <p>Edad: <input type="number" id="edad" /></p>
+        <p>Teléfono: <input type="number" id="telefono" /></p>
+        <p>Correo: <input type="email" id="correo" /></p>
+        <p>Dirección: <input type="text" id="direccion" /></p>
+        <p>Fecha de Nacimiento: <input type="date" id="fecha" /></p>
+      </form>
+      <button type="button" onclick="afiliar()">REGISTRAR</button>
+      <p id="resultado1"></p>
+    </section>
+
+    <section class="div2">
+      <h2>Consulta de Precios de Guitarras</h2>
+      <form>
+        <p>
+          Estilo de guitarra:
+          <select id="estilo">
+            <option value="acustica">Acústica</option>
+            <option value="electrica">Eléctrica</option>
+            <option value="Criolla">Criolla</option>
+          </select>
+        </p>
+        <p>
+          Marca:
+          <select id="marca">
+            <option value="gibson">Gibson</option>
+            <option value="fender">Fender</option>
+            <option value="ibanez">Ibanez</option>
+            <option value="yamaha">Yamaha</option>
+            <option value="epiphone">Epiphone</option>
+          </select>
+        </p>
+        <p>
+          Modelo:
+          <select id="modelo">
+            <option value="lespaul">Les Paul</option>
+            <option value="stratocaster">Stratocaster</option>
+            <option value="telecaster">Telecaster</option>
+            <option value="acustica1">Acústica 1</option>
+            <option value="acustica2">Acústica 2</option>   
+
+          </select>
+        </p>
+        <p>
+          Color:
+          <select id="color">
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="negro">Negro</option>
+          </select>
+        </p>
+        <p>
+          Precio: <input type="number" id="n1" readonly />
+        </p>
+        <p>
+          Cantidad: <input type="number" id="n2" />
+        </p>
+      </form>
+      <button type="button" onclick="mostrarPrecio()">MOSTRAR PRECIO</button>
+      <button onclick="calcular()">COTIZAR</button>
+      <p id="resultado2"></p>
+    </section>
+  </main>
+</body>
+</html>
